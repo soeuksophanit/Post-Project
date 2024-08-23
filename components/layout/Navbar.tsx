@@ -50,7 +50,7 @@ const Navbar = () => {
         <div>
           <Link
             href={"/upload"}
-            className="inline-block py-3 px-6 cursor-pointer transition-all shadow-lg hover:shadow-gray-300/50 bg-gray-900 text-white rounded-full font-semibold"
+            className="inline-block hover:scale-[1.02] active:translate-y-1 py-3 px-6 cursor-pointer transition-all shadow-lg hover:shadow-gray-300/50 bg-gray-900 text-white rounded-full font-semibold"
           >
             Create Post
           </Link>

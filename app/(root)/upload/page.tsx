@@ -158,7 +158,7 @@ const PageUpload = () => {
                       height={1000}
                       src={img.imgPreview!}
                       alt="img project"
-                      className="w-full  h-[400px] object-cover rounded-sm"
+                      className="w-full  h-[700px] object-cover rounded-sm"
                     />
                   )}
                 </div>
