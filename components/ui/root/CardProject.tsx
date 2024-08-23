@@ -9,15 +9,15 @@ interface Props {
 
 const CardProject = ({ project }: Props) => {
   return (
-    <div className="w-full flex flex-col gap-3">
-      <div>
+    <div className="w-full flex flex-col gap-3 ">
+      <div className="inline-block overflow-hidden rounded-sm">
         <Image
           alt={project?.projectDescription}
           width={1000}
           height={1000}
           src={src(project.projectImg)}
           priority
-          className="h-[300px] object-cover !w-full rounded-sm"
+          className="h-[300px] object-cover transition-all hover:scale-[1.2] !w-full "
         />
       </div>
       <div className="flex flex-col gap-2">

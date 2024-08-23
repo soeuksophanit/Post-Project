@@ -25,10 +25,13 @@ const Navbar = () => {
               {navLinks.map((link, idx) => (
                 <li key={idx} className="px-2 py-1">
                   <Link
-                    className={cn(" inline-block relative text-lg ", {
-                      "after:absolute after:rounded-lg after:w-[50%] after:left-0 after:-bottom-1 after:content-[''] after:h-[3px] after:bg-gray-600":
-                        path == link.href,
-                    })}
+                    className={cn(
+                      " inline-block relative text-lg after:absolute after:rounded-lg after:w-0 after:left-0 after:-bottom-1 after:content-[''] after:h-[3px] hover:after:w-[50%] after:duration-300 after:bg-gray-600",
+                      {
+                        "after:absolute after:rounded-lg after:w-[50%] after:left-0 after:-bottom-1 after:content-[''] after:h-[3px] after:bg-gray-600":
+                          path == link.href,
+                      }
+                    )}
                     href={link.href}
                   >
                     {link.label}
@@ -49,7 +52,7 @@ const Navbar = () => {
             href={"/upload"}
             className="inline-block py-3 px-6 cursor-pointer transition-all shadow-lg hover:shadow-gray-300/50 bg-gray-900 text-white rounded-full font-semibold"
           >
-            Post Project
+            Create Post
           </Link>
         </div>
       </div>
@@ -68,10 +71,7 @@ const navLinks = [
     href: "/about",
     label: "About",
   },
-  {
-    href: "/service",
-    label: "Service",
-  },
+
   {
     href: "/contact",
     label: "Contact",
