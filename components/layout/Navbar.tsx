@@ -10,12 +10,15 @@ const Navbar = () => {
   return (
     <header className="flex justify-between  py-4">
       <div className="flex items-center gap-10">
-        <div className="size-[60px] border-2 border-gray-700 p-2 grid grid-cols-2 place-items-center">
+        <Link
+          href={"/"}
+          className="size-[60px] border-2 border-gray-700 p-2 grid grid-cols-2 place-items-center"
+        >
           <div className="text-sm font-medium">S</div>
           <div className="text-sm font-medium">S</div>
           <div className="text-sm font-medium">P</div>
           <div className="text-sm font-medium">N</div>
-        </div>
+        </Link>
         <div>
           <nav>
             <ul className="flex gap-6">

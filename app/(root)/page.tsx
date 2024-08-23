@@ -5,10 +5,12 @@ import { useFetchProjects } from "@/lib/hooks/useFetchProjects";
 import { useGetOwner } from "@/lib/hooks/useGetOwner";
 
 export default function Home() {
-  const { data: owners } = useGetOwner();
+  const { data: owners, isLoading } = useGetOwner();
   const { data: projects } = useFetchProjects();
 
-  console.log(owners, projects);
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
   return (
     <div>
       <CardList data={projects} />
